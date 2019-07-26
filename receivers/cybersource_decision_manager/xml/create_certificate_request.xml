@@ -1,0 +1,63 @@
+// You must store your certificate and private key at Spreedly to use XML signatures when delivering to 3rd party endpoints
+// The certificate should be in PEM format. The private key should be RSA encrypted, in PEM format.
+// See http://docs.spreedly.test/reference/api/v1/#create-certificate
+// Curl Example:
+
+curl -X POST \
+  http://core.spreedly.test/v1/certificates.xml \
+  -H 'Accept: application/xml' \
+  -H 'Authorization: Basic MkZqQUF4RlpORDFuQnU3MFp6OUdtYm5FSkRiOjRLc0tFUnJDQndkMmluVTRDVjRiVkdBTEhYb2s0eFpVUE9weHdUS2NEN1pmMXlkWU1nT0xIQ1hsSDlKNEFyUFE=' \
+  -H 'Content-Type: application/xml' \
+  -H 'Postman-Token: c4c6fbb9-ed96-437f-bcd2-1a7eba883eed' \
+  -H 'cache-control: no-cache' \
+  -d '<certificate>
+  <pem><![CDATA[-----BEGIN CERTIFICATE-----
+MIIDMDCCAhgCCQCJjV5tUn0DNTANBgkqhkiG9w0BAQsFADBaMTMwMQYDVQQDDCpN
+eUFwcCBYTUwgU2lnbmF0dXJlIFByb2R1Y3Rpb24gQ2VydGlmaWNhdGUxIzAhBgkq
+hkiG9w0BCQEWFHNlY3VyaXR5QHlvdXJvcmcuY29tMB4XDTE5MDQwMjE4MjIzMFoX
+DTIwMDQwMTE4MjIzMFowWjEzMDEGA1UEAwwqTXlBcHAgWE1MIFNpZ25hdHVyZSBQ
+cm9kdWN0aW9uIENlcnRpZmljYXRlMSMwIQYJKoZIhvcNAQkBFhRzZWN1cml0eUB5
+b3Vyb3JnLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMldbCSv
+WjRO+jOB9pObeRzVU3QqpsRTH9Rw7n3LniuPbdbI98BvabGVzwWp+nCyRMu21aNk
+CJfzUA8Ggubw4CIiSiM/isMXhdavtIrdnLrcVEY1mOMnMbP1rjiXsEhyDC/hmYc4
+V9JyfMQoiSs8n8aAXZQE65TCO9BnIKpr+V4ew/gkeucpyLlPCd2DEZ+24aI3Lnli
+Q/ABIdNSlQX44n56NX9lui4+nrsb8ImqWjE2YqB3vLh+IHjlcOViLiN7i7EeUTbi
+0/6vxbdEiMLnr36eqHQpAAuvQCL7bTxH6hnKjZ/hdHy0Z59gHfmEbIqbjmHn1gT5
+sPkhYpMb5JYiq38CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAGNjf8tNsQ/mvQNk4
+3b4knwlCIT6elhiofeKXoV9224C5ZcM1bw0hRfeEIXG5fs8ZEwlLGAS+bNgCctmW
+NcuqxEreR4TiV07WT/18m1go+34IygGxlxgntLQOZQyX6mjVyZjgOjefweA8OFyG
+s+xqgVuR9G7Zu8KFW0MaCj7QZBl1h4FfA3Hz25R1WC2qcbY04Db3EkLYPU4hBEzX
+HXkAyW5LWRk4pzxew9CRQ+uHyumPyi2O6Yv9avI9QA5PkuRoH0xgQ87n3AXgQ08p
+HDoiNxcDFhfL13lspowI40bsOWfGm2vvTrV42PvobHB2Hwb3a77mM2Z6bCvdN32R
+jn30kQ==
+-----END CERTIFICATE-----]]>
+</pem>
+  <private_key><![CDATA[-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAyV1sJK9aNE76M4H2k5t5HNVTdCqmxFMf1HDufcueK49t1sj3
+wG9psZXPBan6cLJEy7bVo2QIl/NQDwaC5vDgIiJKIz+KwxeF1q+0it2cutxURjWY
+4ycxs/WuOJewSHIML+GZhzhX0nJ8xCiJKzyfxoBdlATrlMI70Gcgqmv5Xh7D+CR6
+5ynIuU8J3YMRn7bhojcueWJD8AEh01KVBfjifno1f2W6Lj6euxvwiapaMTZioHe8
+uH4geOVw5WIuI3uLsR5RNuLT/q/Ft0SIwuevfp6odCkAC69AIvttPEfqGcqNn+F0
+fLRnn2Ad+YRsipuOYefWBPmw+SFikxvkliKrfwIDAQABAoIBAQCAUYNPoVrHSKjS
+V/hsub+lKyAiP+fD5gC7nTetfCsQMTdajviqbZUZ8JBbWKVaWY/TjXB4zY9YXVng
+KVMTnd4GgnliGuTvS7cjRxazA2QUA8HEd/U0k85tkpryP1+72sl/XbE7ZSE533E4
+g2hd4CUlFroLUFNbmacKOB2t3F6tpaXZD3TXGd2QIWEdRVbBHcbH5ZLhOVlvyJ5k
++gHXvpdVsZnmC8eZPPs/JL3B0SwJop8Ln+DKkg6P4s+oq9dkR0OwuhuE+iWV8evF
+LFb0j87kJV8JsHMvk3qbbunWHisQr23U4Vl/k6rjkodryrzDrwQ3czzR3nlKN/Kl
+VROR8TMBAoGBAOmi434+RbZQP9PdVEa+pEh2IA81L3og6+TqemL4sZtqlCEfrOZD
+FsSH6CEU13SMn7l+riYCzBYSdvPDAynhJp+u0REUQFPJAMcgefxw2mfJwFrtn9Ap
+JWaAPhcMeK8l/5rdZxnjECDRAkW+5SdtYj9x6rjgsmJ89DFdd5EW1JL/AoGBANyj
+vpNSRBdy+lM62T0DiAJ6gc0HpYQpNzIydIT9bh8zkmwU5z0pVtczpmIzdK0lPlHO
+ERWgBXXsfRfEupVoFND9H5A7tTMQtJF4rLg3gUpa2alTUXSWfm9uS7TWVRYR7hsV
+/ui7oW3zIXdD8dRHozITSzM27gfiMy6Q3I/SIGeBAoGAf0lgObJBlq8n5wxpUtWg
+eV3p338xa48uFZxtqygk0zCAnX89WoHokJAeto89RuEqUAwlYs4ZVFkg93MicRma
+SlsayfxHg545z0LxUshFJVB0fNWDQQx5tNtfeH0x7vJ7zGqdNixP6CEW5Nq4y/87
+DKfKoojAhwnenFp4vtI6ZA8CgYBqTvcvEo8+YSbd3Vf4fvAUiaRq/okwgY9Xv1nH
+Djj2Dao6K2QzYuy1qew8GqDYID7Dua8fpUecRwMK5b4k6M5G1/9SRoKLBTyLbwKB
+jDTed6GyZTO1IiHvXMxbaH38sUzxfgqhZm5khKYWSgWGC7JFGWi9V3UfFU0l3aR4
+I317gQKBgQCxWrKZlfq/iWcvBqB8Ep4wiJPXZXjl/Dvic/2pCC69MMimtDTHQ8o8
+gp7c3Fp+RDO8U5wgqq2amodR1RPbAdgG7rQvewnzPsaTIKSfOueY3LG4UR22tNvZ
+LeaSV7WUssler/Ybk6Gj+psx8RXbL+ZcYPoeL7mb6kUoWFfzcmpIjA==
+-----END RSA PRIVATE KEY-----]]>
+	</private_key>
+</certificate>'

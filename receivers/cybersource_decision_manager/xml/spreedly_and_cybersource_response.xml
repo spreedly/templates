@@ -1,0 +1,40 @@
+<transaction>
+    <token>$TRANSACTION_TOKEN</token>
+    <transaction_type>DeliverPaymentMethod</transaction_type>
+    <state>succeeded</state>
+    <created_at type="dateTime">2019-02-06T20:21:27Z</created_at>
+    <updated_at type="dateTime">2019-02-06T20:21:28Z</updated_at>
+    <succeeded type="boolean">true</succeeded>
+    <message>Succeeded!</message>
+    <url>https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor/</url>
+    <response>
+        <status type="integer">200</status>
+        <headers>
+            <![CDATA[Server: Apache-Coyote/1.1
+X-OPNET-Transaction-Trace: a2_af25ea08-7b39-4300-af50-ed4d717b5d76
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Content-Type: text/xml
+Content-Length: 1373
+Date: Wed, 06 Feb 2019 20:21:28 GMT
+Connection: keep-alive]]>
+    
+        </headers>
+        <body>
+            <![CDATA[
+            <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="Timestamp-1432734140"><wsu:Created>2019-02-06T20:21:28.217Z</wsu:Created></wsu:Timestamp></wsse:Security></soap:Header><soap:Body><c:replyMessage xmlns:c="urn:schemas-cybersource-com:transaction-data-1.150"><c:merchantReferenceCode>$YOUR_MERCHANT_REFERENCE_CODE</c:merchantReferenceCode><c:requestID>5494844874886834303007</c:requestID><c:decision>ACCEPT</c:decision><c:reasonCode>100</c:reasonCode><c:requestToken>AhjzbwSTKeBKjMYRgDAfhAFRp9747b+kDdgEabDJpJl6MV3DwoCYSRxB</c:requestToken><c:afsReply><c:reasonCode>100</c:reasonCode><c:afsResult>89</c:afsResult><c:hostSeverity>1</c:hostSeverity><c:consumerLocalTime>12:21:28</c:consumerLocalTime><c:scoreModelUsed>default</c:scoreModelUsed><c:cardBin>411111</c:cardBin><c:binCountry>US</c:binCountry><c:cardAccountType>Visa Gold</c:cardAccountType><c:cardScheme>VISA CREDIT</c:cardScheme><c:cardIssuer>RIVER VALLEY CREDIT UNION</c:cardIssuer></c:afsReply><c:decisionReply><c:casePriority>3</c:casePriority><c:activeProfileReply/></c:decisionReply></c:replyMessage></soap:Body></soap:Envelope>]]>
+    
+</body>
+</response>
+<receiver>
+    <company_name>Cybersource Decision Manager</company_name>
+    <receiver_type>cybersource_decision_manager_test</receiver_type>
+    <token>$RECEIVER_TOKEN</token>
+    <hostnames>https://ics2wstesta.ic3.com</hostnames>
+    <state>retained</state>
+    <created_at type="dateTime">2019-02-05T19:18:27Z</created_at>
+    <updated_at type="dateTime">2019-02-05T19:18:27Z</updated_at>
+    <credentials nil="true"/>
+</receiver>

@@ -1,0 +1,13 @@
+{
+    "orderId": "1234567ABCDEF",
+    "taxAmount": "1.00",
+    "zip": "{{ credit_card_zip }}",
+    "expMonth": "{{ credit_card_month }}",
+    "cvv": "{{ credit_card_verification_value }}",
+    "amount": "647",
+    "currency": "usd",
+    "expYear": "{{ credit_card_year }}",
+    "first6": "{{#truncate}}6,{{ credit_card_number }}{{/truncate}}",
+    "cardEncrypted": "{{#base64}}{{#rsa}}-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA.......\n-----END RSA PRIVATE KEY-----\n-----BEGIN CERTIFICATE-----\nMIIEogIBAAKCAQEA.......\n-----END CERTIFICATE-----\n  ,oaep,{{ credit_card_number }}{{/rsa}}{{/base64}}",
+    "last4": "{{#last}}4,{{ credit_card_number }}{{/last}}"
+}

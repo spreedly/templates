@@ -1,0 +1,13 @@
+{
+  "orderId":"1234567ABCDEF",
+  "taxAmount":"1.00",
+  "zip":"{{ credit_card_zip }}",
+  "expMonth":"{{ credit_card_month }}",
+  "cvv":"{{ credit_card_verification_value }}",
+  "amount":"647",
+  "currency":"usd",
+  "expYear":"{{ credit_card_year }}",
+  "first6":"{{#truncate}}6,{{ credit_card_number }}{{/truncate}}",
+  "cardEncrypted":"{{#gpg}}-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: MyPGP v0.1\nabCDEFghIJ0KLMNOPQ1Rs1TUVWxYZ\n...\n-----END PGP PUBLIC KEY BLOCK-----,user@example.com,{{ credit_card_number }}{{/gpg}}",
+  "last4":"{{#last}}4,{{ credit_card_number }}{{/last}}"
+}
