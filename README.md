@@ -1,4 +1,4 @@
-# Spreedly Payment Method Distribution Templates
+# Spreedly Receivere Templates
 
 Spreedly, Inc. (“Spreedly”) is providing this repository (the “Repository”) of free, open source, community-submitted software templates (the “Templates”) that can be used for integrations with [Spreedly Payment Method Distribution](https://docs.spreedly.com/guides/payment-method-distribution/), subject to the terms and conditions described in this README.md, The MIT License (a copy of which is linked above), and the CONTRIBUTING.md file linked above (collectively, the “Terms of Use”).  BY ACCESSING THIS REPOSITORY AND/OR ACCESSING AND USING ANY OF THE TEMPLATES, YOU ARE MANIESTING YOUR ACCEPTANCE TO ALL OF THE TERMS OF USE AND SUCH TERMS OF USE BECOME A LEGALLY BINDING CONTRACT BETTWEN YOU AND SPREEDLY.  AS A RESULT, PLEASE READ ALL OF THE TERMS OF USE CAREFULLY.
 
