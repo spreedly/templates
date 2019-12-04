@@ -12,7 +12,7 @@ Please be careful **no Access Secrets, authentication tokens, or PCI data** ever
 For pull requests to be accepted, we will check if your email address is
 associated with a Spreedly [Organization](https://docs.spreedly.com/guides/account/#organizations) in good standing.
 In the comments of your pull request, please include an environment key for your organization.
-We will match your email address by checking the commit sha has your username associated with it on GitHub.com,
+We will match your email address by checking the commit SHA has your username associated with it on GitHub.com,
 and that the raw commit contains an email address that is in the organization associated with the environment key you provided.
 
 ## It's MIT licensed
