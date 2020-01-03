@@ -1,0 +1,135 @@
+{
+    "CreatePassengerNameRecordRQ": {
+        "HotelBook": {
+            "BookingInfo": {
+                "BookingKey": "bfb87fa5-4e22-495a-8255-45d23af02c54",
+                "RequestorID": "99999999"
+            },
+            "POS": {
+                "Source": {
+                    "AgencyAddress": {
+                        "AddressLine1": "300 WEST AVE",
+                        "CityName": {
+                            "content": "AUSTIN"
+                        },
+                        "CountryName": {
+                            "Code": "US"
+                        },
+                        "StateProv": {
+                            "StateCode": "TX"
+                        }
+                    },
+                    "AgencyName": "Agency",
+                    "ISOCountryCode": "US",
+                    "PseudoCityCode": "AAAA",
+                    "RequestorID": {
+                        "Id": "99999999",
+                        "IdContext": "IATA",
+                        "Type": 5
+                    }
+                }
+            },
+            "PaymentInformation": {
+                "FormOfPayment": {
+                    "PaymentCard": {
+                        "CardCode": "{{#card_type_mapping}}visa:VI,master:CA,american_express:AX,discover:DS{{/card_type_mapping}}",
+                        "CardNumber": "{{credit_card_number}}",
+                        "ExpiryMonth": {{credit_card_month}},
+                        "ExpiryYear": "{{credit_card_year}}",
+                        "FullCardHolderName": {
+                            "FirstName": "{{credit_card_first_name}}",
+                            "LastName": "{{credit_card_last_name}}"
+                        },
+                        "PaymentType": "CC"
+                    }
+                },
+                "Type": "GUARANTEE"
+            },
+            "Rooms": {
+                "Room": [
+                    {
+                        "Guests": {
+                            "Guest": [
+                                {
+                                    "Contact": {
+                                        "Phone": "1111111274"
+                                    },
+                                    "Email": "johndoe@johndoe@gmail.com",
+                                    "FirstName": "John",
+                                    "Index": 1,
+                                    "LastName": "Doe",
+                                    "LeadGuest": true,
+                                    "Type": 10
+                                }
+                            ]
+                        },
+                        "RoomIndex": 1
+                    }
+                ]
+            }
+        },
+        "PostProcessing": {
+            "EndTransaction": {
+                "Source": {
+                    "ReceivedFrom": "Agency"
+                }
+            },
+            "RedisplayReservation": {
+                "waitInterval": 1000
+            }
+        },
+        "TravelItineraryAddInfo": {
+            "AgencyInfo": {
+                "Address": {
+                    "AddressLine": "Agency",
+                    "CityName": "Austin",
+                    "CountryCode": "US",
+                    "PostalCode": "78701",
+                    "StateCountyProv": {
+                        "StateCode": "TX"
+                    },
+                    "StreetNmbr": "300 West Avenue"
+                },
+                "Ticketing": {
+                    "PseudoCityCode": "AAAA",
+                    "TicketType": "7TAW"
+                }
+            },
+            "CustomerInfo": {
+                "ContactNumbers": {
+                    "ContactNumber": [
+                        {
+                            "Phone": "757-619-3677",
+                            "PhoneUseType": "A"
+                        },
+                        {
+                            "NameNumber": "1.1",
+                            "Phone": "1111111274",
+                            "PhoneUseType": "C"
+                        }
+                    ]
+                },
+                "Email": [
+                    {
+                        "Address": "bookings@agency.ai"
+                    },
+                    {
+                        "Address": "johndoe@gmail.com",
+                        "NameNumber": "1.1"
+                    }
+                ],
+                "PersonName": [
+                    {
+                        "GivenName": "John",
+                        "Infant": false,
+                        "NameNumber": "1.1",
+                        "Surname": "Doe"
+                    }
+                ]
+            }
+        },
+        "haltOnHotelBookError": true,
+        "targetCity": "AAAA",
+        "version": "2.2.0"
+    }
+}
