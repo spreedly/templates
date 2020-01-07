@@ -1,0 +1,188 @@
+{
+    "CreatePassengerNameRecordRQ": {
+        "AirBook": {
+            "HaltOnStatus": [
+                {
+                    "Code": "UC"
+                },
+                {
+                    "Code": "US"
+                },
+                {
+                    "Code": "NO"
+                },
+                {
+                    "Code": "NS"
+                },
+                {
+                    "Code": "UN"
+                },
+                {
+                    "Code": "LL"
+                },
+                {
+                    "Code": "HL"
+                }
+            ],
+            "OriginDestinationInformation": {
+                "FlightSegment": [
+                    {
+                        "ArrivalDateTime": "2020-02-18T17:40",
+                        "DepartureDateTime": "2020-02-18T15:55",
+                        "DestinationLocation": {
+                            "LocationCode": "SFO"
+                        },
+                        "FlightNumber": "1221",
+                        "MarketingAirline": {
+                            "Code": "AS",
+                            "FlightNumber": "1221"
+                        },
+                        "MarriageGrp": "O",
+                        "NumberInParty": "1",
+                        "OriginLocation": {
+                            "LocationCode": "AUS"
+                        },
+                        "ResBookDesigCode": "T",
+                        "Status": "NN"
+                    },
+                    {
+                        "ArrivalDateTime": "2020-02-20T00:25",
+                        "DepartureDateTime": "2020-02-19T18:45",
+                        "DestinationLocation": {
+                            "LocationCode": "AUS"
+                        },
+                        "FlightNumber": "1222",
+                        "MarketingAirline": {
+                            "Code": "AS",
+                            "FlightNumber": "1222"
+                        },
+                        "MarriageGrp": "O",
+                        "NumberInParty": "1",
+                        "OriginLocation": {
+                            "LocationCode": "SFO"
+                        },
+                        "ResBookDesigCode": "R",
+                        "Status": "NN"
+                    }
+                ]
+            },
+            "RedisplayReservation": {
+                "NumAttempts": 5,
+                "WaitInterval": 1000
+            },
+            "RetryRebook": {
+                "Option": true
+            }
+        },
+        "AirPrice": {
+            "PriceComparison": {
+                "AmountSpecified": 296.8
+            },
+            "PriceRequestInformation": {
+                "OptionalQualifiers": {
+                    "PricingQualifiers": {
+                        "PassengerType": [
+                            {
+                                "Code": "ADT",
+                                "Quantity": "1"
+                            }
+                        ]
+                    }
+                },
+                "Retain": true
+            }
+        },
+        "PostProcessing": {
+            "EndTransaction": {
+                "Source": {
+                    "ReceivedFrom": "Travel Agency"
+                }
+            },
+            "RedisplayReservation": true
+        },
+        "SpecialReqDetails": {
+            "AddRemark": {
+                "RemarkInfo": {
+                    "FOP_Remark": {
+                        "CC_Info": {
+                            "PaymentCard": {
+                                "Code": "{{#card_type_mapping}}visa:VI,master:CA,american_express:AX,discover:DS{{/card_type_mapping}}",
+                                "ExpireDate": "{{#format_date}}%Y-%m,{{credit_card_expiration_date}}{{/format_date}}",
+                                "Number": "{{credit_card_number}}"
+                            }
+                        }
+                    },
+                    "Remark": []
+                }
+            },
+            "SpecialService": {
+                "SpecialServiceInfo": {
+                    "SecureFlight": [
+                        {
+                            "PersonName": {
+                                "DateOfBirth": "1987-09-16",
+                                "Gender": "M",
+                                "GivenName": "John",
+                                "NameNumber": "1.1",
+                                "Surname": "Doe"
+                            },
+                            "SegmentNumber": "A"
+                        }
+                    ]
+                }
+            }
+        },
+        "TravelItineraryAddInfo": {
+            "AgencyInfo": {
+                "Address": {
+                    "AddressLine": "Agency",
+                    "CityName": "Austin",
+                    "CountryCode": "US",
+                    "PostalCode": "78701",
+                    "StateCountyProv": {
+                        "StateCode": "TX"
+                    },
+                    "StreetNmbr": "300 West Avenue"
+                },
+                "Ticketing": {
+                    "PseudoCityCode": "AAAA",
+                    "TicketType": "7TAW"
+                }
+            },
+            "CustomerInfo": {
+                "ContactNumbers": {
+                    "ContactNumber": [
+                        {
+                            "Phone": "757-111-1111",
+                            "PhoneUseType": "A"
+                        },
+                        {
+                            "NameNumber": "1.1",
+                            "Phone": "1111111274",
+                            "PhoneUseType": "C"
+                        }
+                    ]
+                },
+                "Email": [
+                    {
+                        "Address": "bookings@agency.ai"
+                    },
+                    {
+                        "Address": "johndoe@gmail.com",
+                        "NameNumber": "1.1"
+                    }
+                ],
+                "PersonName": [
+                    {
+                        "GivenName": "John",
+                        "Infant": false,
+                        "NameNumber": "1.1",
+                        "Surname": "Doe"
+                    }
+                ]
+            }
+        },
+        "targetCity": "AAAA",
+        "version": "2.0.0"
+    }
+}
